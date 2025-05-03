@@ -1,8 +1,8 @@
 title: Start
 position: -929,-245
 ---
-<<declare $legislativo = 10>>
 <<declare $executivo = 10>>
+<<declare $legislativo = 10>>
 <<declare $judiciario = 10>>
 <<jump Next>>
 ===
@@ -17,7 +17,7 @@ position: -605,-38
     <<jump Over>>
 <<endif>>
 
-👔 {$executivo} Executivo | 🏛️ {$legislativo} Legislativo | ⚖️ {$judiciario} Judiciario
+👔 {$judiciario} Executivo | 🏛️ {$legislativo} Legislativo | ⚖️ {$executivo} Judiciario
 
 <<declare $node = 0>>
 <<set $node = random_range(1, 20)>>
@@ -27,13 +27,13 @@ position: -605,-38
 title: 1
 position: 0,0
 ---
-"Presidente mudou verbas do orçamento por decreto de novo... Congresso tá de enfeite agora? 🤨"
--> 👔🔸🏛️🔸⚖️▫️ Tudo bem, alguém tem que fazer as coisas andarem.
+Presidente mudou verbas do orçamento por decreto de novo... Congresso tá de enfeite agora? 🤨
+-> 👔|🏛️|▫️ Tudo bem, alguém tem que fazer as coisas andarem.
     <<set $executivo += 1>>
     <<set $legislativo += -1>>
     <<set $judiciario += 0>>
     <<jump Next>>
--> 👔🔸🏛️🔸⚖️▫️ Absurdo! Isso devia ser decisão do Congresso.
+-> 👔|🏛️|▫️ Absurdo! Isso devia ser decisão do Congresso.
     <<set $executivo += -1>>
     <<set $legislativo += 1>>
     <<set $judiciario += 0>>
@@ -43,13 +43,13 @@ position: 0,0
 title: 2
 position: 10,100
 ---
-"Socorro, o Presidente mandou fechar o Congresso 'temporariamente' 😱!!! Quem vai fazer as leis agora?!"
--> 👔🟧🏛️🟧⚖️🔸 Bem feito, aqueles políticos não fazem nada mesmo.
+Socorro, o Presidente mandou fechar o Congresso 'temporariamente' 😱!!! Quem vai fazer as leis agora?!
+-> 👔|🏛️|⚖️ Bem feito, aqueles políticos não fazem nada mesmo.
     <<set $executivo += 3>>
     <<set $legislativo += -3>>
     <<set $judiciario += -1>>
     <<jump Next>>
--> 👔🟧🏛️🟧⚖️🔶 Isso é golpe! Ditadura nunca mais!
+-> 👔|🏛️|⚖️ Isso é golpe! Ditadura nunca mais!
     <<set $executivo += -3>>
     <<set $legislativo += 3>>
     <<set $judiciario += 2>>
@@ -59,13 +59,13 @@ position: 10,100
 title: 3
 position: -50,50
 ---
-Print do Twitter: "Presidente alfineta juíza que condenou seu aliado, chamando decisão de 'injustiça'. Pode isso, gente? 😬"
--> 👔🔶🏛️▫️⚖️🔶 É isso aí, juiz não é eleito e se mete demais mesmo.
+Print do Twitter: Presidente alfineta juíza que condenou seu aliado, chamando decisão de 'injustiça'. Pode isso, gente? 😬
+-> 👔|▫️⚖️| É isso aí, juiz não é eleito e se mete demais mesmo.
     <<set $executivo += 2>>
     <<set $legislativo += 0>>
     <<set $judiciario += -2>>
     <<jump Next>>
--> 👔🔶🏛️▫️⚖️🔶 Que papelão, Presidente! Tem que respeitar a Justiça.
+-> 👔|▫️⚖️| Que papelão, Presidente! Tem que respeitar a Justiça.
     <<set $executivo += -2>>
     <<set $legislativo += 0>>
     <<set $judiciario += 2>>
@@ -75,13 +75,13 @@ Print do Twitter: "Presidente alfineta juíza que condenou seu aliado, chamando 
 title: 4
 position: 200,-20
 ---
-Notícia viral: "Presidente desobedece ordem do STF em público e declara: 'Não vou cumprir e ponto final'. 😨 O clima esquentou..."
--> 👔🟧🏛️▫️⚖️🟧 Bateu de frente mesmo, gostei! O STF estava exagerando.
+Notícia viral: Presidente desobedece ordem do STF em público e declara: 'Não vou cumprir e ponto final'. 😨 O clima esquentou...
+-> 👔|▫️⚖️| Bateu de frente mesmo, gostei! O STF estava exagerando.
     <<set $executivo += 3>>
     <<set $legislativo += 0>>
     <<set $judiciario += -3>>
     <<jump Next>>
--> 👔🟧🏛️🔸⚖️🟧 Gente, gravíssimo! Se nem ordem do STF vale, virou anarquia?
+-> 👔|🏛️|⚖️| Gente, gravíssimo! Se nem ordem do STF vale, virou anarquia?
     <<set $executivo += -3>>
     <<set $legislativo += 1>>
     <<set $judiciario += 3>>
@@ -91,13 +91,13 @@ Notícia viral: "Presidente desobedece ordem do STF em público e declara: 'Não
 title: 5
 position: 150,150
 ---
-"KKK deputados querem eles mesmos tocar obra do governo. Viraram prefeitos agora, é? 🙄"
--> 👔🔸🏛️🔸⚖️▫️ Melhor assim, pelo menos a obra sai do papel.
+KKK deputados querem eles mesmos tocar obra do governo. Viraram prefeitos agora, é? 🙄
+-> 👔|🏛️|▫️ Melhor assim, pelo menos a obra sai do papel.
     <<set $executivo += -1>>
     <<set $legislativo += 1>>
     <<set $judiciario += 0>>
     <<jump Next>>
--> 👔🔸🏛️🔸⚖️▫️ Cada um no seu quadrado! Deputado não é prefeito.
+-> 👔|🏛️|▫️ Cada um no seu quadrado! Deputado não é prefeito.
     <<set $executivo += 1>>
     <<set $legislativo += -1>>
     <<set $judiciario += 0>>
@@ -107,13 +107,13 @@ position: 150,150
 title: 6
 position: -100,-100
 ---
-"Galera, pasmem: deputados aprovaram impeachment do Presidente só porque ele não convidou eles pro churrasco 🍖😂! Já querem escolher presidente novo amanhã!"
--> 👔🟧🏛️🟧⚖️▫️ Já vai tarde! Nem precisava de desculpa mesmo.
+Galera, pasmem: deputados aprovaram impeachment do Presidente só porque ele não convidou eles pro churrasco 🍖😂! Já querem escolher presidente novo amanhã!
+-> 👔|🏛️|▫️ Já vai tarde! Nem precisava de desculpa mesmo.
     <<set $executivo += -3>>
     <<set $legislativo += 3>>
     <<set $judiciario += 0>>
     <<jump Next>>
--> 👔🔶🏛️🟧⚖️🔶 Que palhaçada! Não se tira Presidente assim. Cadê o STF pra barrar?
+-> 👔|🏛️|⚖️| Que palhaçada! Não se tira Presidente assim. Cadê o STF pra barrar?
     <<set $executivo += 2>>
     <<set $legislativo += -3>>
     <<set $judiciario += 2>>
@@ -123,13 +123,13 @@ position: -100,-100
 title: 7
 position: 80,-150
 ---
-"Projeto polêmico: deputados querem poder dar 'cartão vermelho' pra ministro do STF 🤦. Imagina a bagunça se passar..."
--> 👔▫️🏛️🔶⚖️🟧 Finalmente vão colocar esses ministros nos eixos!
+Projeto polêmico: deputados querem poder dar 'cartão vermelho' pra ministro do STF 🤦. Imagina a bagunça se passar...
+-> ▫️🏛️|⚖️| Finalmente vão colocar esses ministros nos eixos!
     <<set $executivo += 0>>
     <<set $legislativo += 2>>
     <<set $judiciario += -3>>
     <<jump Next>>
--> 👔▫️🏛️🟧⚖️🟧 Abuso total! Deputado não é juiz - vai virar perseguição política.
+-> ▫️🏛️|⚖️| Abuso total! Deputado não é juiz - vai virar perseguição política.
     <<set $executivo += 0>>
     <<set $legislativo += -3>>
     <<set $judiciario += 3>>
@@ -139,13 +139,13 @@ position: 80,-150
 title: 8
 position: -200,30
 ---
-"Você viu essa? Um juiz barrou a nomeação de um ministro só porque 'não gostou do currículo' 🤔... Quem governa afinal?"
--> 👔🔸🏛️▫️⚖️🔸 Se barrou, devia ter motivo. Ainda bem que alguém agiu.
+Você viu essa? Um juiz barrou a nomeação de um ministro só porque 'não gostou do currículo' 🤔... Quem governa afinal?
+-> 👔|▫️⚖️| Se barrou, devia ter motivo. Ainda bem que alguém agiu.
     <<set $executivo += -1>>
     <<set $legislativo += 0>>
     <<set $judiciario += 1>>
     <<jump Next>>
--> 👔🔸🏛️▫️⚖️🔸 Intromissão demais! Juiz não deve ficar escolhendo ministro.
+-> 👔|▫️⚖️| Intromissão demais! Juiz não deve ficar escolhendo ministro.
     <<set $executivo += 1>>
     <<set $legislativo += 0>>
     <<set $judiciario += -1>>
@@ -155,13 +155,13 @@ position: -200,30
 title: 9
 position: 60,180
 ---
-Notícia chocante: "STF afasta Presidente por 'má gestão' sem impeachment 🤯. Os ministros viraram chefes do Executivo agora?"
--> 👔🟧🏛️🔸⚖️🟧 Antes eles do que deixar o país na mão desse Presidente. Mandaram bem!
+Notícia chocante: STF afasta Presidente por 'má gestão' sem impeachment 🤯. Os ministros viraram chefes do Executivo agora?
+-> 👔|🏛️|⚖️| Antes eles do que deixar o país na mão desse Presidente. Mandaram bem!
     <<set $executivo += -3>>
     <<set $legislativo += -1>>
     <<set $judiciario += 3>>
     <<jump Next>>
--> 👔🟧🏛️🔶⚖️🟧 Ditadura de toga?! Juiz não pode tirar presidente eleito assim.
+-> 👔|🏛️|⚖️| Ditadura de toga?! Juiz não pode tirar presidente eleito assim.
     <<set $executivo += 3>>
     <<set $legislativo += 2>>
     <<set $judiciario += -3>>
@@ -171,13 +171,13 @@ Notícia chocante: "STF afasta Presidente por 'má gestão' sem impeachment 🤯
 title: 10
 position: -150,120
 ---
-"STF dá ultimato: ou Congresso aprova certa lei em 30 dias, ou eles mesmos vão 'legislar' no lugar 🤷. Quem é que manda?"
--> 👔▫️🏛️🔶⚖️🔶 Certíssimos. Se o Congresso enrola, o STF tem que agir mesmo.
+STF dá ultimato: ou Congresso aprova certa lei em 30 dias, ou eles mesmos vão 'legislar' no lugar 🤷. Quem é que manda?
+-> ▫️🏛️|⚖️| Certíssimos. Se o Congresso enrola, o STF tem que agir mesmo.
     <<set $executivo += 0>>
     <<set $legislativo += -2>>
     <<set $judiciario += 2>>
     <<jump Next>>
--> 👔▫️🏛️🔶⚖️🔶 Abuso de poder! Juiz não foi eleito pra fazer lei.
+-> ▫️🏛️|⚖️| Abuso de poder! Juiz não foi eleito pra fazer lei.
     <<set $executivo += 0>>
     <<set $legislativo += 2>>
     <<set $judiciario += -2>>
@@ -188,12 +188,12 @@ title: 11
 position: 20,50
 ---
 Congresso aprova lei de investimento em educação e Presidente sanciona no mesmo dia! #EducaçãoParaTodos
--> 👔🔶🏛️🔶⚖️▫️ Adorei! Educação em primeiro lugar.
+-> 👔|🏛️|▫️ Adorei! Educação em primeiro lugar.
     <<set $executivo += 2>>
     <<set $legislativo += 2>>
     <<set $judiciario += 0>>
     <<jump Next>>
--> 👔🔸🏛️🔶⚖️▫️ Até parece que esse dinheiro vai chegar nas escolas.
+-> 👔|🏛️|▫️ Até parece que esse dinheiro vai chegar nas escolas.
     <<set $executivo += -1>>
     <<set $legislativo += -2>>
     <<set $judiciario += 0>>
@@ -204,12 +204,12 @@ title: 12
 position: 220,80
 ---
 Presidente veta projeto de lei aprovado no Congresso, alegando risco ao orçamento. Congresso debate se derruba o veto. #VetoPresidencial
--> 👔🟧🏛️🔸⚖️▫️ Apoiado! Se ia estourar as contas públicas, tem que vetar mesmo.
+-> 👔|🏛️|▫️ Apoiado! Se ia estourar as contas públicas, tem que vetar mesmo.
     <<set $executivo += 3>>
     <<set $legislativo += -1>>
     <<set $judiciario += 0>>
     <<jump Next>>
--> 👔🔶🏛️🟧⚖️▫️ Derruba esse veto, Congresso! A lei é importante.
+-> 👔|🏛️|▫️ Derruba esse veto, Congresso! A lei é importante.
     <<set $executivo += -2>>
     <<set $legislativo += 3>>
     <<set $judiciario += 0>>
@@ -220,12 +220,12 @@ title: 13
 position: 430,60
 ---
 STF derruba lei aprovada pelo Congresso e sancionada pelo Presidente por violar a Constituição; todos os poderes acatam a decisão. #Constituição
--> 👔🔸🏛️🔸⚖️🟧 Ainda bem que o STF barrou essa lei inconstitucional.
+-> 👔|🏛️|⚖️| Ainda bem que o STF barrou essa lei inconstitucional.
     <<set $executivo += -1>>
     <<set $legislativo += -1>>
     <<set $judiciario += 3>>
     <<jump Next>>
--> 👔🔸🏛️🔸⚖️🟧 O STF não devia interferir no que os eleitos decidiram.
+-> 👔|🏛️|⚖️| O STF não devia interferir no que os eleitos decidiram.
     <<set $executivo += 1>>
     <<set $legislativo += 1>>
     <<set $judiciario += -3>>
@@ -236,12 +236,12 @@ title: 14
 position: 640,90
 ---
 Senado instala CPI para investigar gastos do governo. Executivo colabora com as apurações, tudo dentro da lei. #CPI
--> 👔🔸🏛️🔶⚖️▫️ Tem que investigar mesmo, transparência é essencial!
+-> 👔|🏛️|▫️ Tem que investigar mesmo, transparência é essencial!
     <<set $executivo += 1>>
     <<set $legislativo += 2>>
     <<set $judiciario += 0>>
     <<jump Next>>
--> 👔🔸🏛️🔶⚖️▫️ Lá vão eles perder tempo com CPI em vez de trabalhar.
+-> 👔|🏛️|▫️ Lá vão eles perder tempo com CPI em vez de trabalhar.
     <<set $executivo += 1>>
     <<set $legislativo += -2>>
     <<set $judiciario += 0>>
@@ -252,12 +252,12 @@ title: 15
 position: 180,300
 ---
 Presidente indica jurista renomado para vaga no STF, e Senado aprova o nome após sabatina. #STF
--> 👔🔶🏛️🔸⚖️🔶 Currículo excelente! Aprovado com razão.
+-> 👔|🏛️|⚖️| Currículo excelente! Aprovado com razão.
     <<set $executivo += 2>>
     <<set $legislativo += 1>>
     <<set $judiciario += 2>>
     <<jump Next>>
--> 👔🔶🏛️🔸⚖️🔸 Não confio nesse indicado. O Senado vacilou ao aprovar.
+-> 👔|🏛️|⚖️| Não confio nesse indicado. O Senado vacilou ao aprovar.
     <<set $executivo += -2>>
     <<set $legislativo += -1>>
     <<set $judiciario += -1>>
@@ -268,12 +268,12 @@ title: 16
 position: 390,330
 ---
 Congresso aprova o orçamento anual proposto pelo Executivo sem atrasos. Planejamento do país garantido. #Orçamento
--> 👔🔸🏛️🔸⚖️▫️ Belo trabalho em equipe, tudo certo pro ano que vem!
+-> 👔|🏛️|▫️ Belo trabalho em equipe, tudo certo pro ano que vem!
     <<set $executivo += 1>>
     <<set $legislativo += 1>>
     <<set $judiciario += 0>>
     <<jump Next>>
--> 👔🔸🏛️🔶⚖️▫️ Aposto que encheram o orçamento de gastos pra agradar a base eleitoral.
+-> 👔|🏛️|▫️ Aposto que encheram o orçamento de gastos pra agradar a base eleitoral.
     <<set $executivo += -1>>
     <<set $legislativo += -2>>
     <<set $judiciario += 0>>
@@ -284,12 +284,12 @@ title: 17
 position: 600,310
 ---
 Presidente publica Medida Provisória para socorrer cidades após desastre natural. self.Congresso terá 120 dias para votar a MP. #Urgência
--> 👔🟧🏛️▫️⚖️▫️ Medida necessária! Numa crise assim, agilidade é tudo.
+-> 👔|▫️▫️ Medida necessária! Numa crise assim, agilidade é tudo.
     <<set $executivo += 3>>
     <<set $legislativo += 0>>
     <<set $judiciario += 0>>
     <<jump Next>>
--> 👔🟧🏛️🔸⚖️▫️ Esse governo adora passar por cima do Congresso com MP...
+-> 👔|🏛️|▫️ Esse governo adora passar por cima do Congresso com MP...
     <<set $executivo += -3>>
     <<set $legislativo += 1>>
     <<set $judiciario += 0>>
@@ -300,12 +300,12 @@ title: 18
 position: 810,340
 ---
 Câmara autoriza processo de impeachment contra o Presidente. Julgamento irá ao Senado, presidido pelo chefe do STF. #Impeachment
--> 👔🟧🏛️🔶⚖️🔸 Se fez coisa errada, impeachment nele. Ninguém está acima da lei!
+-> 👔|🏛️|⚖️| Se fez coisa errada, impeachment nele. Ninguém está acima da lei!
     <<set $executivo += -3>>
     <<set $legislativo += 2>>
     <<set $judiciario += 1>>
     <<jump Next>>
--> 👔🟧🏛️🟧⚖️🔸 Golpe! Estão tentando tirar um presidente eleito à força!
+-> 👔|🏛️|⚖️| Golpe! Estão tentando tirar um presidente eleito à força!
     <<set $executivo += 3>>
     <<set $legislativo += -3>>
     <<set $judiciario += -1>>
@@ -316,12 +316,12 @@ title: 19
 position: 1020,377
 ---
 STF suspende parte de um decreto presidencial a pedido do Congresso. Governo acata a decisão judicial. #FreiosEContrapesos
--> 👔🔸🏛️🔸⚖️🔶 Decisão sensata. O decreto tinha exageros mesmo.
+-> 👔|🏛️|⚖️| Decisão sensata. O decreto tinha exageros mesmo.
     <<set $executivo += -1>>
     <<set $legislativo += 1>>
     <<set $judiciario += 2>>
     <<jump Next>>
--> 👔🔶🏛️▫️⚖️🟧 Aff, STF barrando o governo de novo. Assim não dá!
+-> 👔|▫️⚖️| Aff, STF barrando o governo de novo. Assim não dá!
     <<set $executivo += 2>>
     <<set $legislativo += 0>>
     <<set $judiciario += -3>>
@@ -332,12 +332,12 @@ title: 20
 position: 1230,400
 ---
 STF manda prender senador pego em flagrante por corrupção. Senado mantém a prisão por ampla maioria. #Justiça
--> 👔▫️🏛️🔶⚖️🟧 Até que enfim! Político corrupto tem que ir pra cadeia.
+-> ▫️🏛️|⚖️| Até que enfim! Político corrupto tem que ir pra cadeia.
     <<set $executivo += 0>>
     <<set $legislativo += 2>>
     <<set $judiciario += 3>>
     <<jump Next>>
--> 👔▫️🏛️🔸⚖️🟧 Abuso! Prender um senador eleito é exagero.
+-> ▫️🏛️|⚖️| Abuso! Prender um senador eleito é exagero.
     <<set $executivo += 0>>
     <<set $legislativo += -1>>
     <<set $judiciario += -3>>
